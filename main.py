@@ -3,7 +3,7 @@ from tkinter import messagebox, simpledialog
 import numpy as np
 from tkinter import font as tkfont
 
-# ---------- الگوریتم استراسن با padding ----------
+# Strassen Algorithm
 def add(A, B):
     return A + B
 
@@ -44,7 +44,7 @@ def strassen(A, B, threshold=64):
     bottom = np.hstack((C21, C22))
     return np.vstack((top, bottom))
 
-# ---------- ماتریس مقدماتی ----------
+# Elementary Matrixs
 def make_elementary_swap(n, i, j):
     E = np.eye(n)
     E[[i, j]] = E[[j, i]]
@@ -96,7 +96,7 @@ def calculate_determinant(A):
 def calculate_inverse(A):
     return np.linalg.inv(A)
 
-# ---------- رابط گرافیکی ----------
+# GUI
 class MatrixApp:
     def __init__(self, root):
         self.root = root
