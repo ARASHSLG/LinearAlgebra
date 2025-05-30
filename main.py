@@ -171,3 +171,9 @@ class MatrixApp:
             self.text.insert(tk.END, f"\nدترمینان ماتریس: {det}\n")
         except Exception as e:
             messagebox.showerror("خطا", str(e))
+
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    app = MatrixApp(root)
+    root.mainloop()
